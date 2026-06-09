@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Login</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.login{
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+    width:300px;
+    color:white;
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#mensagem{
+    margin-top:10px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login">
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Digite seu e-mail">
+
+    <input type="password" id="senha" placeholder="Digite sua senha">
+
+    <button onclick="entrar()">Entrar</button>
+
+    <p id="mensagem"></p>
+</div>
+
+<script>
+function entrar(){
+
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+
+    if(email === "" || senha === ""){
+        document.getElementById("mensagem").innerHTML =
+        "Preencha todos os campos.";
+    }else{
+        document.getElementById("mensagem").innerHTML =
+        "Login realizado com sucesso!";
+    }
+}
+</script>
+
+</body>
+</html>
